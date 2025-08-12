@@ -1,0 +1,17 @@
+﻿  friLBRClient.cpp
+  friLBRCommand.cpp
+  friLBRState.cpp
+  friClientApplication.cpp
+  friDataHelper.cpp
+  friTransformationClient.cpp
+  friUdpConnection.cpp
+  friCommandMessageEncoder.cpp
+  friMonitoringMessageDecoder.cpp
+  crc32.cpp
+  Generating Code...
+  pb_decode.c
+  pb_encode.c
+  pb_frimessages_callbacks.c
+  FRIMessages.pb.c
+  Generating Code...
+  libFRIClient.vcxproj -> D:\STUDIUM\Term4\Project\Repo\Robot-Stack\FastRobotInterface_Client_Source\FRI-Client-SDK_Cpp\build\MSVisualStudio2010\Debug\libFRIClient.lib
