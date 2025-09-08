@@ -71,7 +71,7 @@ const int DEFAULT_PORTID = 30200;
 const double DEFAULT_FREQUENCY = 0.25;
 const double DEFAULT_AMPLITUDE = 5.0;
 
-
+// test
 
 int main (const int argc, const char* const * const argv)
 {
@@ -80,6 +80,7 @@ int main (const int argc, const char* const * const argv)
    {
 	   printf(
 	         "\nKUKA LBR wrench sine overlay example application\n\n"
+			 "\tTEST\n"
 	         "\tCommand line arguments:\n"
 	         "\t1) remote hostname (optional)\n"
 	         "\t2) port ID (optional)\n"

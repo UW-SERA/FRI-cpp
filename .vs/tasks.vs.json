@@ -1,0 +1,20 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-LBRWrenchLegOverlay",
+      "appliesTo": "application/LBRWrenchLegOverlay/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-LBRWrenchLegOverlay",
+      "appliesTo": "build/examples/LBRWrenchLegOverlay/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-controller_comp",
+      "appliesTo": "example/LBRWrenchLegOverlay/controller_comp/controller_comp.cpp",
+      "type": "launch"
+    }
+  ]
+}

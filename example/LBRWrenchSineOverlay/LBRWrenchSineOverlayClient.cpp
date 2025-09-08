@@ -78,7 +78,7 @@ LBRWrenchSineOverlayClient::LBRWrenchSineOverlayClient(const double freqHzX, con
    , _phiX(0.0)
    , _phiY(0.0)
 {
-   printf("LBRWrenchSineOverlayClient initialized:\n"
+   printf("LBRWrenchSineOverlayClient initialized: TEST\n"
          "\tfrequency (Hz):  X = %f, Y = %f\n"
          "\tamplitude (N):   X = %f, Y = %f\n"
          , freqHzX, freqHzY, amplRadX, amplRadY);

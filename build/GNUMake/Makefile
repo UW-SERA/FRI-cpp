@@ -15,10 +15,11 @@ SOURCE_DIRS		= $(CLIENTBASE_DIR) \
 				 	  $(PROTOBUF_DIR) \
 				 	  $(PROTOBUF_GEN_DIR)
 
-EXAMPLE_DIRS 	= $(EXP_DIR)/LBRJointSineOverlay \
+EXAMPLE_DIRS 	=	$(EXP_DIR)/LBRJointSineOverlay \
 					  $(EXP_DIR)/LBRCartesianOverlay \
 					  $(EXP_DIR)/LBRTorqueSineOverlay \
 					  $(EXP_DIR)/LBRWrenchSineOverlay \
+					  $(EXP_DIR)/LBRWrenchLegOverlay \
 					  $(EXP_DIR)/LBRClientTemplate \
 					  $(EXP_DIR)/TransformationProvider \
 					  $(EXP_DIR)/SimulatedTransformationProvider \
