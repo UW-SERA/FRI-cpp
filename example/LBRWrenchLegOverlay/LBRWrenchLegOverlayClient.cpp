@@ -63,26 +63,14 @@ cost of any service and repair.
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include "LBRWrenchLegOverlayClient.h"
+#include "controller_comp/controller_comp.h"
 
 
 using namespace KUKA::FRI;
 //******************************************************************************
-LBRWrenchLegOverlayClient::LBRWrenchLegOverlayClient(const double freqHzX, const double freqHzY, 
-      const double amplRadX, const double amplRadY) 
-   : _freqHzX(freqHzX)
-   , _freqHzY(freqHzY)
-   , _amplRadX(amplRadX)
-   , _amplRadY(amplRadY)
-   , _stepWidthX(0.0)
-   , _stepWidthY(0.0)
-   , _phiX(0.0)
-   , _phiY(0.0)
-{
-   printf("LBRWrenchLegOverlayClient initialized:\n"
-         "\tfrequency (Hz):  X = %f, Y = %f\n"
-         "\tamplitude (N):   X = %f, Y = %f\n"
-         , freqHzX, freqHzY, amplRadX, amplRadY);
+LBRWrenchLegOverlayClient::LBRWrenchLegOverlayClient() 
    
+{
    for(int i = 0; i<CART_VECTOR_DIM; i++){_wrench[i] = 0.0;}
 }
 
@@ -99,14 +87,6 @@ void LBRWrenchLegOverlayClient::onStateChange(const ESessionState oldState, cons
    {
       // (re)initialize sine parameters when entering Monitoring
       case MONITORING_READY:
-      {
-         for(int i = 0; i<CART_VECTOR_DIM; i++){_wrench[i] = 0.0;}
-         _phiX = 0.0;
-         _phiY = 0.0;
-         _stepWidthX = 2 * M_PI * _freqHzX * robotState().getSampleTime();
-         _stepWidthY = 2 * M_PI * _freqHzY * robotState().getSampleTime();
-         break;
-      }
       case IDLE:
       case MONITORING_WAIT:
       case COMMANDING_WAIT:
@@ -144,22 +124,17 @@ void LBRWrenchLegOverlayClient::command()
    
    if (robotState().getClientCommandMode() == WRENCH)
    {
-      // calculate new forces in x and y direction
-      _wrench[0] = _amplRadX * sin(_phiX);
-      _wrench[1] = _amplRadY * sin(_phiY);
-      
-      _phiX += _stepWidthX;
-      _phiY += _stepWidthY;
-      if (_phiX >= (2 * M_PI))
-      {
-         _phiX -= (2 * M_PI);
-      }
-      if (_phiY >= (2 * M_PI))
-      {
-         _phiY -= (2 * M_PI);
-      }
+        // calculate new forces in x and y direction
 
-      robotCommand().setWrench(_wrench);
+	    // input vector to controller_comp:
+        // leg_angles (rad): hip adduction, hip external rotation, hip flexion, knee flexion, angular rates [4]
+        // set input vector to zero for now, until NDI tracker connection works
+        double leg_angles[8] = {0};
+
+        // Call the coontrol law function controller_comp:
+        controller_comp(leg_angles, _wrench);
+     
+        robotCommand().setWrench(_wrench);
    }
 }
 

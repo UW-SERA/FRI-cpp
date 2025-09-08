@@ -84,6 +84,7 @@
     <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\LBRWrenchLegOverlayClient.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\controller_comp\controller_comp.h" />
     <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\LBRWrenchLegOverlayClient.h" />
   </ItemGroup>
   <ItemGroup>

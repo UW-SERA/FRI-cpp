@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\doc\\html",
+    "\\example",
+    "\\example\\LBRWrenchLegOverlay\\controller_comp"
   ],
-  "SelectedNode": "\\FRIClientSDK.sln",
+  "SelectedNode": "\\example\\LBRWrenchLegOverlay",
   "PreviewInSolutionExplorer": false
 }

@@ -68,8 +68,6 @@ using namespace KUKA::FRI;
 
 
 const int DEFAULT_PORTID = 30200;
-const double DEFAULT_FREQUENCY = 0.25;
-const double DEFAULT_AMPLITUDE = 5.0;
 
 
 
@@ -79,24 +77,16 @@ int main (const int argc, const char* const * const argv)
    if ((1 < argc) && (NULL != strstr (argv[1], "help")))
    {
 	   printf(
-	         "\nKUKA LBR wrench sine overlay example application\n\n"
+	         "\nKUKA LBR wrench leg overlay application\n\n"
 	         "\tCommand line arguments:\n"
 	         "\t1) remote hostname (optional)\n"
 	         "\t2) port ID (optional)\n"
-	         "\t3) sine frequency in Hertz (for Fx) (optional)\n"
-	         "\t4) sine amplitude in radians (for Fx) (optional)\n"
-	         "\t5) sine frequency in Hertz (for Fy) (optional)\n"
-	         "\t6) sine amplitude in radians (for Fy) (optional)\n"
 	   );
 	   return 1;
    }
    
    const char* const hostname = ((argc >= 2) && (argv[1][0] != '\0')) ? argv[1] : NULL;
    const int port = ((argc >= 3) && (argv[2][0] != '\0')) ? atoi(argv[2]) : DEFAULT_PORTID;
-   const double frequencyX = ((argc >= 4) && (argv[3][0] != '\0')) ? atof(argv[3]) : DEFAULT_FREQUENCY;
-   const double amplitudeX = ((argc >= 5) && (argv[4][0] != '\0')) ? atof(argv[4]) : DEFAULT_AMPLITUDE;
-   const double frequencyY = ((argc >= 6) && (argv[5][0] != '\0')) ? atof(argv[5]) : DEFAULT_FREQUENCY;
-   const double amplitudeY = ((argc >= 7) && (argv[6][0] != '\0')) ? atof(argv[6]) : DEFAULT_AMPLITUDE;
    
    printf("Enter LBRWrenchLegOverlay Client Application\n");
 
@@ -107,7 +97,7 @@ int main (const int argc, const char* const * const argv)
    /**************************************************************************/
    
    // create new sine overlay client
-   LBRWrenchLegOverlayClient trafoClient(frequencyX, frequencyY, amplitudeX, amplitudeY);
+   LBRWrenchLegOverlayClient trafoClient;
 
    /***************************************************************************/
    /*                                                                         */

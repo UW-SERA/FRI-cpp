@@ -1,12 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\build\\examples\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D0D1969D-7184-45F4-A6B3-5E572BF1EDDE}|LBRWrenchLegOverlay\\LBRWrenchLegOverlay.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LBRWrenchLegOverlayClient.cpp",
+              "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayClient.cpp",
+              "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayClient.cpp",
+              "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayClient.cpp",
+              "RelativeToolTip": "..\\..\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayClient.cpp",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAH4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-08T19:04:12.6Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

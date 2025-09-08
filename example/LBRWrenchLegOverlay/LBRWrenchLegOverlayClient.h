@@ -81,8 +81,7 @@ public:
     * @param amplRadX Sine amplitude in radians of force in X-direction
     * @param amplRadY Sine amplitude in radians of force in Y-direction
     */
-   LBRWrenchLegOverlayClient(double freqHzX, double freqHzY, 
-         double amplRadX, double amplRadY);
+   LBRWrenchLegOverlayClient();
    
    /** 
     * \brief Destructor.
@@ -110,16 +109,7 @@ public:
 private:
 
    static const int CART_VECTOR_DIM = 6; //!< number of elements in a Cartesian vector
-   
-   double _freqHzX;        //!< sine frequency x-direction (Hertz)
-   double _freqHzY;        //!< sine frequency y-direction (Hertz)
-   double _amplRadX;       //!< sine amplitude x-direction (radians)
-   double _amplRadY;       //!< sine amplitude y-direction (radians)
    double _wrench[CART_VECTOR_DIM];      //!< commanded wrench
-   double _stepWidthX;     //!< stepwidth for sine in x-direction
-   double _stepWidthY;     //!< stepwidth for sine in y-direction
-   double _phiX;             //!< current phase for sine in x-direction
-   double _phiY;             //!< current phase for sine in y-direction
    
 };
 
