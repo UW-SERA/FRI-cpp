@@ -1,0 +1,14 @@
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\client_lbr\friLBRClient.cpp;D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\libFRIClient\x64\Debug\friLBRClient.obj
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\client_lbr\friLBRCommand.cpp;D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\libFRIClient\x64\Debug\friLBRCommand.obj
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\client_lbr\friLBRState.cpp;D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\libFRIClient\x64\Debug\friLBRState.obj
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\base\friClientApplication.cpp;D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\libFRIClient\x64\Debug\friClientApplication.obj
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\base\friDataHelper.cpp;D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\libFRIClient\x64\Debug\friDataHelper.obj
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\client_trafo\friTransformationClient.cpp;D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\libFRIClient\x64\Debug\friTransformationClient.obj
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\connection\friUdpConnection.cpp;D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\libFRIClient\x64\Debug\friUdpConnection.obj
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\nanopb-0.2.8\pb_decode.c;D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\libFRIClient\x64\Debug\pb_decode.obj
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\nanopb-0.2.8\pb_encode.c;D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\libFRIClient\x64\Debug\pb_encode.obj
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\protobuf\friCommandMessageEncoder.cpp;D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\libFRIClient\x64\Debug\friCommandMessageEncoder.obj
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\protobuf\friMonitoringMessageDecoder.cpp;D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\libFRIClient\x64\Debug\friMonitoringMessageDecoder.obj
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\protobuf\crc32.cpp;D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\libFRIClient\x64\Debug\crc32.obj
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\protobuf\pb_frimessages_callbacks.c;D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\libFRIClient\x64\Debug\pb_frimessages_callbacks.obj
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\protobuf_gen\FRIMessages.pb.c;D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\libFRIClient\x64\Debug\FRIMessages.pb.obj

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\controller_comp\controller_comp.cpp" />
+    <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\LBRWrenchLegOverlayApp.cpp" />
+    <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\LBRWrenchLegOverlayClient.cpp" />
+    <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\TrackingDataClientUDPTransfer.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\controller_comp\controller_comp.h" />
+    <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\LBRWrenchLegOverlayClient.h" />
+    <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\TrackingDataClientUDPTransfer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\example\LBRWrenchLegOverlay\openigtlink\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\..\..\OpenIGTLink-build\lib\Debug\OpenIGTLink.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\OpenIGTLink-build\bin\Debug\OpenIGTLink.dll" />
+  </ItemGroup>
+</Project>

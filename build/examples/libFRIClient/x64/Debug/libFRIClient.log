@@ -1,0 +1,27 @@
+﻿  friLBRClient.cpp
+  friLBRCommand.cpp
+  friLBRState.cpp
+  friClientApplication.cpp
+  friDataHelper.cpp
+  friTransformationClient.cpp
+  friUdpConnection.cpp
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\client_trafo\friTransformationClient.cpp(75,56): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\client_trafo\friTransformationClient.cpp(75,34): warning C4267: 'initializing': conversion from 'size_t' to 'const unsigned int', possible loss of data
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\client_trafo\friTransformationClient.cpp(104,66): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\client_trafo\friTransformationClient.cpp(104,35): warning C4267: 'initializing': conversion from 'size_t' to 'const unsigned int', possible loss of data
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\connection\friUdpConnection.cpp(125,21): warning C4244: '=': conversion from 'SOCKET' to 'int', possible loss of data
+  friCommandMessageEncoder.cpp
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\protobuf\friCommandMessageEncoder.cpp(142,91): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\protobuf\friCommandMessageEncoder.cpp(151,32): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  friMonitoringMessageDecoder.cpp
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\protobuf\friMonitoringMessageDecoder.cpp(143,49): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\protobuf\friMonitoringMessageDecoder.cpp(143,34): warning C4267: 'initializing': conversion from 'size_t' to 'const unsigned int', possible loss of data
+  crc32.cpp
+  Generating Code...
+  pb_decode.c
+  pb_encode.c
+  pb_frimessages_callbacks.c
+D:\STUDIUM\Term4\Project\Repo\FRI-cpp\src\protobuf\pb_frimessages_callbacks.c(146,21): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  FRIMessages.pb.c
+  Generating Code...
+  libFRIClient.vcxproj -> D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\x64\Debug\libFRIClient.lib

@@ -2,6 +2,12 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+      <FullPath>D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\Debug\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\STUDIUM\Term4\Project\Repo\OpenIGTLink-build\bin\Debug\OpenIGTLink.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>D:\STUDIUM\Term4\Project\Repo\FRI-cpp\build\examples\Debug\LBRWrenchLegOverlay.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>

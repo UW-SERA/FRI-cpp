@@ -3,6 +3,15 @@
   "WorkspaceRootPath": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\build\\examples\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D0D1969D-7184-45F4-A6B3-5E572BF1EDDE}|LBRWrenchLegOverlay\\LBRWrenchLegOverlay.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0D1969D-7184-45F4-A6B3-5E572BF1EDDE}|LBRWrenchLegOverlay\\LBRWrenchLegOverlay.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.cxx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0D1969D-7184-45F4-A6B3-5E572BF1EDDE}|LBRWrenchLegOverlay\\LBRWrenchLegOverlay.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D0D1969D-7184-45F4-A6B3-5E572BF1EDDE}|LBRWrenchLegOverlay\\LBRWrenchLegOverlay.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -18,15 +27,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "LBRWrenchLegOverlayApp.cpp",
+              "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayApp.cpp",
+              "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayApp.cpp",
+              "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayApp.cpp",
+              "RelativeToolTip": "..\\..\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayApp.cpp",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAuwKYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-09T12:32:29.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TrackingDataClientUDPTransfer.cxx",
+              "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.cxx",
+              "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.cxx",
+              "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.cxx",
+              "RelativeToolTip": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.cxx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-10T19:35:01.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "LBRWrenchLegOverlayClient.cpp",
               "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayClient.cpp",
               "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayClient.cpp",
               "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayClient.cpp",
               "RelativeToolTip": "..\\..\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayClient.cpp",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAH4AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-08T19:04:12.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-08T19:04:12.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TrackingDataClientUDPTransfer.h",
+              "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.h",
+              "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.h",
+              "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.h",
+              "RelativeToolTip": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-10T19:47:58.249Z"
             }
           ]
         }

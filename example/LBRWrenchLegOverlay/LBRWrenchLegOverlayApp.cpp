@@ -63,6 +63,7 @@ cost of any service and repair.
 #include "LBRWrenchLegOverlayClient.h"
 #include "friUdpConnection.h"
 #include "friClientApplication.h"
+#include "TrackingDataClientUDPTransfer.h"
 
 using namespace KUKA::FRI;
 
@@ -96,8 +97,12 @@ int main (const int argc, const char* const * const argv)
    /*                                                                         */
    /**************************************************************************/
    
-   // create new sine overlay client
+   // create new tracking data udp transfer object
+   Tracking_data_client_udp_transfer tracker;
+
+   // create new wrench overlay client
    LBRWrenchLegOverlayClient trafoClient;
+
 
    /***************************************************************************/
    /*                                                                         */
@@ -106,19 +111,26 @@ int main (const int argc, const char* const * const argv)
    /*                                                                         */
    /***************************************************************************/
 
+   // initialize tracker over udp
+   tracker.init();
+
+
    // create new udp connection
    UdpConnection connection;
 
 
    // pass connection and client to a new FRI client application
-   ClientApplication app(connection, trafoClient);
+   //ClientApplication app(connection, trafoClient);
    
    // connect client application to KUKA Sunrise controller
-   bool success = app.connect(port, hostname);
+   bool success = 1;
+   //success = app.connect(port, hostname);
    if (!success)
    {
       printf("\nConnection to KUKA Sunrise controller failed.");
    }
+
+
 
    /***************************************************************************/
    /*                                                                         */
@@ -130,14 +142,18 @@ int main (const int argc, const char* const * const argv)
    // repeatedly call the step routine to receive and process FRI packets
    while (success)
    {
-      success = app.step();
+	  // receive tracking data
+	  tracker.loop();
+
+	  // set the wrench values
+      //success = app.step();
       
       // check if we are in IDLE because the FRI session was closed
-      if (trafoClient.robotState().getSessionState() == IDLE)
+      //if (trafoClient.robotState().getSessionState() == IDLE)
       {
          // In this demo application we simply quit.
          // Waiting for a new FRI session would be another possibility.
-         break;
+      //   break;
       }
    }
 
@@ -149,7 +165,7 @@ int main (const int argc, const char* const * const argv)
    /***************************************************************************/
 
    // disconnect from controller
-   app.disconnect();
+   //app.disconnect();
    
    printf("Exit LBRWrenchLegOverlay Client Application\n");
    
