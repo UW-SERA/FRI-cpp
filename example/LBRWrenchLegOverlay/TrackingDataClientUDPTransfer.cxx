@@ -40,7 +40,7 @@ void Tracking_data_client_udp_transfer::init()
     // Establish Connection
 
     socket = igtl::UDPClientSocket::New();
-    int success = socket->JoinNetwork("127.0.0.1", port);
+    int success = socket->JoinNetwork("localhost", port);
     if (success < 0)
     {
         std::cerr << "unable to join network, check if your local machine joined the host more than once. " << std::endl;
