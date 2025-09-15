@@ -3,6 +3,15 @@
   "WorkspaceRootPath": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\build\\examples\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7226C73C-4793-4D12-8FE3-AB23FD0B755B}|SimulatedTransformationProvider\\SimulatedTransformationProvider.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\SimulatedTransformationProvider\\SimulatedTransformationProviderApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B5273F4-2247-4A34-918E-5EF6A6324404}|LBRClientTemplate\\LBRClientTemplate.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRClientTemplate\\MyLBRClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B5273F4-2247-4A34-918E-5EF6A6324404}|LBRClientTemplate\\LBRClientTemplate.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRClientTemplate\\MyLBRApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D0D1969D-7184-45F4-A6B3-5E572BF1EDDE}|LBRWrenchLegOverlay\\LBRWrenchLegOverlay.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -27,6 +36,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SimulatedTransformationProviderApp.cpp",
+              "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\SimulatedTransformationProvider\\SimulatedTransformationProviderApp.cpp",
+              "RelativeDocumentMoniker": "..\\..\\example\\SimulatedTransformationProvider\\SimulatedTransformationProviderApp.cpp",
+              "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\SimulatedTransformationProvider\\SimulatedTransformationProviderApp.cpp",
+              "RelativeToolTip": "..\\..\\example\\SimulatedTransformationProvider\\SimulatedTransformationProviderApp.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-13T21:51:06.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MyLBRClient.cpp",
+              "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRClientTemplate\\MyLBRClient.cpp",
+              "RelativeDocumentMoniker": "..\\..\\example\\LBRClientTemplate\\MyLBRClient.cpp",
+              "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRClientTemplate\\MyLBRClient.cpp",
+              "RelativeToolTip": "..\\..\\example\\LBRClientTemplate\\MyLBRClient.cpp",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-13T21:50:44.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MyLBRApp.cpp",
+              "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRClientTemplate\\MyLBRApp.cpp",
+              "RelativeDocumentMoniker": "..\\..\\example\\LBRClientTemplate\\MyLBRApp.cpp",
+              "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRClientTemplate\\MyLBRApp.cpp",
+              "RelativeToolTip": "..\\..\\example\\LBRClientTemplate\\MyLBRApp.cpp",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-13T21:50:32.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "LBRWrenchLegOverlayApp.cpp",
               "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayApp.cpp",
               "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayApp.cpp",
@@ -39,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "TrackingDataClientUDPTransfer.cxx",
               "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.cxx",
               "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.cxx",
@@ -47,12 +95,11 @@
               "RelativeToolTip": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.cxx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-10T19:35:01.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T19:35:01.147Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "LBRWrenchLegOverlayClient.cpp",
               "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayClient.cpp",
               "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayClient.cpp",
@@ -64,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "TrackingDataClientUDPTransfer.h",
               "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.h",
               "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.h",
