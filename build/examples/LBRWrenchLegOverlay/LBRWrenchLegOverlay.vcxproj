@@ -163,11 +163,13 @@
     <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\controller_comp\controller_comp.cpp" />
     <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\LBRWrenchLegOverlayApp.cpp" />
     <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\LBRWrenchLegOverlayClient.cpp" />
+    <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\TrackingDataClient.cxx" />
     <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\TrackingDataClientUDPTransfer.cxx" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\controller_comp\controller_comp.h" />
     <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\LBRWrenchLegOverlayClient.h" />
+    <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\TrackingDataClient.h" />
     <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\TrackingDataClientUDPTransfer.h" />
   </ItemGroup>
   <ItemGroup>

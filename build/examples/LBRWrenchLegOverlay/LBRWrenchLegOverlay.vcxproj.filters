@@ -5,11 +5,13 @@
     <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\LBRWrenchLegOverlayApp.cpp" />
     <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\LBRWrenchLegOverlayClient.cpp" />
     <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\TrackingDataClientUDPTransfer.cxx" />
+    <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\TrackingDataClient.cxx" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\controller_comp\controller_comp.h" />
     <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\LBRWrenchLegOverlayClient.h" />
     <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\TrackingDataClientUDPTransfer.h" />
+    <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\TrackingDataClient.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\example\LBRWrenchLegOverlay\openigtlink\CMakeLists.txt" />

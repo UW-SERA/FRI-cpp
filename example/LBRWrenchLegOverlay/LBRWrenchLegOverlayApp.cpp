@@ -64,6 +64,7 @@ cost of any service and repair.
 #include "friUdpConnection.h"
 #include "friClientApplication.h"
 #include "TrackingDataClientUDPTransfer.h"
+#include "TrackingDataClient.h"
 
 using namespace KUKA::FRI;
 
@@ -98,7 +99,8 @@ int main (const int argc, const char* const * const argv)
    /**************************************************************************/
    
    // create new tracking data udp transfer object
-   Tracking_data_client_udp_transfer tracker;
+   //Tracking_data_client_udp_transfer trackerUDP;
+   Tracking_data_client tracker;
 
    // create new wrench overlay client
    LBRWrenchLegOverlayClient trafoClient;
@@ -112,6 +114,8 @@ int main (const int argc, const char* const * const argv)
    /***************************************************************************/
 
    // initialize tracker over udp
+   //trackerUDP.init();
+   // initialize tracker over tcp
    tracker.init();
 
 
@@ -143,6 +147,7 @@ int main (const int argc, const char* const * const argv)
    while (success)
    {
 	  // receive tracking data
+	  //trackerUDP.loop();
 	  tracker.loop();
 
 	  // set the wrench values
