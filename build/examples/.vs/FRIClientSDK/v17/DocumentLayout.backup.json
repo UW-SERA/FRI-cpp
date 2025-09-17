@@ -6,16 +6,16 @@
       "AbsoluteMoniker": "D:0:0:{D0D1969D-7184-45F4-A6B3-5E572BF1EDDE}|LBRWrenchLegOverlay\\LBRWrenchLegOverlay.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClient.cxx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D0D1969D-7184-45F4-A6B3-5E572BF1EDDE}|LBRWrenchLegOverlay\\LBRWrenchLegOverlay.vcxproj|D:\\STUDIUM\\TERM4\\PROJECT\\REPO\\FRI-CPP\\EXAMPLE\\LBRWRENCHLEGOVERLAY\\OPENIGTLINK\\IGTLMESSAGEBASE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E29D6D8-A22D-33D2-AFEA-AE7E12975A1D}|..\\..\\..\\OpenIGTLink-build\\Source\\OpenIGTLink.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\OpenIGTLink\\Source\\igtlMessageBase.cxx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E29D6D8-A22D-33D2-AFEA-AE7E12975A1D}|..\\..\\..\\OpenIGTLink-build\\Source\\OpenIGTLink.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\OpenIGTLink\\Source\\igtlSocket.cxx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D0D1969D-7184-45F4-A6B3-5E572BF1EDDE}|LBRWrenchLegOverlay\\LBRWrenchLegOverlay.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0D1969D-7184-45F4-A6B3-5E572BF1EDDE}|LBRWrenchLegOverlay\\LBRWrenchLegOverlay.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.cxx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0D1969D-7184-45F4-A6B3-5E572BF1EDDE}|LBRWrenchLegOverlay\\LBRWrenchLegOverlay.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClient.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0D1969D-7184-45F4-A6B3-5E572BF1EDDE}|LBRWrenchLegOverlay\\LBRWrenchLegOverlay.vcxproj|D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,19 +25,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TrackingDataClient.h",
-              "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClient.h",
-              "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClient.h",
-              "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClient.h",
-              "RelativeToolTip": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClient.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Title": "igtlSocket.cxx",
+              "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\OpenIGTLink\\Source\\igtlSocket.cxx",
+              "RelativeDocumentMoniker": "..\\..\\..\\OpenIGTLink\\Source\\igtlSocket.cxx",
+              "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\OpenIGTLink\\Source\\igtlSocket.cxx",
+              "RelativeToolTip": "..\\..\\..\\OpenIGTLink\\Source\\igtlSocket.cxx",
+              "ViewState": "AgIAAF0BAAAAAAAAAAAmwHUBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-17T18:17:14.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "igtlMessageBase.cxx",
+              "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\OpenIGTLink\\Source\\igtlMessageBase.cxx",
+              "RelativeDocumentMoniker": "..\\..\\..\\OpenIGTLink\\Source\\igtlMessageBase.cxx",
+              "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\OpenIGTLink\\Source\\igtlMessageBase.cxx",
+              "RelativeToolTip": "..\\..\\..\\OpenIGTLink\\Source\\igtlMessageBase.cxx",
+              "ViewState": "AgIAAOsDAAAAAAAAAAAvwPcDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-17T16:39:02.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "igtlMessageBase.h",
+              "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\openigtlink\\igtlMessageBase.h",
+              "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\openigtlink\\igtlMessageBase.h",
+              "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\openigtlink\\igtlMessageBase.h",
+              "RelativeToolTip": "..\\..\\example\\LBRWrenchLegOverlay\\openigtlink\\igtlMessageBase.h",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAvwGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-16T09:46:42.501Z",
+              "WhenOpened": "2025-09-17T16:04:59.945Z",
               "EditorCaption": ""
             },
             {
@@ -48,48 +74,22 @@
               "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClient.cxx",
               "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClient.cxx",
               "RelativeToolTip": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClient.cxx",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC0AAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAIwH0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-16T09:46:42.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TrackingDataClientUDPTransfer.cxx",
-              "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.cxx",
-              "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.cxx",
-              "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.cxx",
-              "RelativeToolTip": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.cxx",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAACQAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-10T19:35:01.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "LBRWrenchLegOverlayApp.cpp",
               "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayApp.cpp",
               "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayApp.cpp",
               "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayApp.cpp",
               "RelativeToolTip": "..\\..\\example\\LBRWrenchLegOverlay\\LBRWrenchLegOverlayApp.cpp",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAE8AAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAAAGYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-09T12:32:29.209Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TrackingDataClientUDPTransfer.h",
-              "DocumentMoniker": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.h",
-              "RelativeDocumentMoniker": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.h",
-              "ToolTip": "D:\\STUDIUM\\Term4\\Project\\Repo\\FRI-cpp\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.h",
-              "RelativeToolTip": "..\\..\\example\\LBRWrenchLegOverlay\\TrackingDataClientUDPTransfer.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-10T19:47:58.249Z",
               "EditorCaption": ""
             }
           ]

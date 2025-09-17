@@ -62,7 +62,7 @@ void Tracking_data_client::init()
 
     //------------------------------------------------------------
     // Ask the server to start pushing tracking data
-    std::cerr << "Sending STT_TDATA message....." << std::endl;
+    /*std::cerr << "Sending STT_TDATA message....." << std::endl;
     igtl::StartTrackingDataMessage::Pointer startTrackingMsg;
     startTrackingMsg = igtl::StartTrackingDataMessage::New();
     startTrackingMsg->SetDeviceName("TDataClient");
@@ -71,7 +71,7 @@ void Tracking_data_client::init()
     startTrackingMsg->Pack();
     socket->Send(startTrackingMsg->GetPackPointer(), startTrackingMsg->GetPackSize());
 
-    int loop = 0;
+    int loop = 0;*/
 }
 
 void Tracking_data_client::loop()
@@ -83,6 +83,7 @@ void Tracking_data_client::loop()
     headerMsg->InitPack();
     bool timeout(false);
     igtlUint64 rs = socket->Receive(headerMsg->GetPackPointer(), headerMsg->GetPackSize(), timeout);
+
     if (rs == 0)
     {
         std::cerr << "Connection closed." << std::endl;
@@ -97,13 +98,18 @@ void Tracking_data_client::loop()
     }
     
     headerMsg->Unpack();
-    if (strcmp(headerMsg->GetDeviceType(), "TDATA") == 0)
-    {
+
+    if (strcmp(headerMsg->GetDeviceType(), "TRANSFORM") == 0)
+    {   
         ReceiveTrackingData(socket, headerMsg);
+        //std::cerr << "Receiving : " << headerMsg->GetDeviceType() << std::endl;
+        socket->Skip(headerMsg->GetBodySizeToRead(), 0);
     }
     else
     {
         std::cerr << "Receiving : " << headerMsg->GetDeviceType() << std::endl;
+        std::cerr << " msg pack : " << headerMsg->GetPackSize() << "byte" << " , address : " << headerMsg->GetPackPointer() << std::endl;
+
         socket->Skip(headerMsg->GetBodySizeToRead(), 0);
     }
 }
@@ -111,27 +117,33 @@ void Tracking_data_client::loop()
 
 int ReceiveTrackingData(igtl::ClientSocket::Pointer& socket, igtl::MessageHeader::Pointer& header)
 {
-  std::cerr << "Receiving TDATA data type." << std::endl;
+  std::cerr << "Receiving TRANSFORM data type." << std::endl;
+  std::cerr << " msg pack : " << header->GetPackSize() << "byte" << " , address : " << header->GetPackPointer() << std::endl;
   
   //------------------------------------------------------------
   // Allocate TrackingData Message Class
 
   igtl::TrackingDataMessage::Pointer trackingData;
   trackingData = igtl::TrackingDataMessage::New();
-  trackingData->SetMessageHeader(header);
+  (igtl::TrackingDataMessage*) trackingData->SetMessageHeader(header);
   trackingData->AllocatePack();
 
   // Receive body from the socket
   bool timeout(false);
   socket->Receive(trackingData->GetPackBodyPointer(), trackingData->GetPackBodySize(), timeout);
 
+  std::cerr << " msg body : " << trackingData->GetPackBodySize() << "byte" << " , address : " << trackingData->GetPackBodyPointer() <<std::endl;
+
   // Deserialize the transform data
   // If you want to skip CRC check, call Unpack() without argument.
   int c = trackingData->Unpack(1);
+  c = 2; // skip CRC and go straight into unpacking
 
   if (c & igtl::MessageHeader::UNPACK_BODY) // if CRC check is OK
-    {
+  {
     int nElements = trackingData->GetNumberOfTrackingDataElements();
+	std::cerr << " message: " << nElements << " elements." << std::endl;
+
     for (int i = 0; i < nElements; i ++)
       {
       igtl::TrackingDataElement::Pointer trackingElement;
@@ -149,7 +161,11 @@ int ReceiveTrackingData(igtl::ClientSocket::Pointer& socket, igtl::MessageHeader
       std::cerr << "================================" << std::endl;
       }
     return 1;
-    }
+  }
+  else     
+  {
+    std::cerr << " CRC error" << std::endl;
+  }
   return 0;
 }
 
