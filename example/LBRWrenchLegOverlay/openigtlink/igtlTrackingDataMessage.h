@@ -26,7 +26,7 @@
 
 namespace igtl
 {
-
+        
 class IGTLCommon_EXPORT TrackingDataElement: public Object
 {
 public:

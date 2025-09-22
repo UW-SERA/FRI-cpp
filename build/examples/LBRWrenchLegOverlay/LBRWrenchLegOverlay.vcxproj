@@ -187,9 +187,6 @@
     <Text Include="..\..\..\example\LBRWrenchLegOverlay\openigtlink\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\..\..\..\OpenIGTLink-build\lib\Debug\OpenIGTLink.lib" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\..\..\..\OpenIGTLink-build\bin\Debug\OpenIGTLink.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

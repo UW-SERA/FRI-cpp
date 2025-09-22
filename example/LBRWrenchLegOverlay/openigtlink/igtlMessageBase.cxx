@@ -170,6 +170,12 @@ std::string MessageBase::GetMessageType() const
     }
 }
 
+void MessageBase::SetMessageType(const std::string& type)
+{
+		m_SendMessageType = type;
+        //m_ReceiveMessageType = type;
+}
+
 #if OpenIGTLink_HEADER_VERSION >= 2
 igtlUint32 MessageBase::GetMetaDataSize()
 {

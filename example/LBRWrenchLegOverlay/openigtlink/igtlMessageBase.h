@@ -229,6 +229,9 @@ namespace igtl
     /// Gets the type of the body.
     const char* GetBodyType();
 
+    /// Setsts the message type.
+    void SetMessageType(const std::string& type);
+
     /// Gets the message type.
     std::string GetMessageType() const;
 
