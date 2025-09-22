@@ -138,7 +138,7 @@ int ReceiveTrackingData(igtl::ClientSocket::Pointer& socket, igtl::MessageHeader
   std::cerr << " msg body : " << rs << "/" << trackingData->GetPackBodySize() << " byte" << " , address : " << trackingData->GetPackBodyPointer() << std::endl;
 
   // print out all data
-  auto p = reinterpret_cast<const uint8_t*>(trackingData->GetPackBodyPointer());
+  auto p = reinterpret_cast<const uint8_t*>(trackingData->GetPackPointer());
   for (int i = 0; i < 222; ++i) {
       // Print each byte in hex with leading zeros, e.g., 0A, 1F
       std::cout << std::hex << std::setw(2) << std::setfill('0')
