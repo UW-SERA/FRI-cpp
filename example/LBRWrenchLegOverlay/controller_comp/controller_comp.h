@@ -5,7 +5,7 @@
 // File: controller_comp.h
 //
 // MATLAB Coder version            : 24.2
-// C/C++ source code generated on  : 08-Sep-2025 19:44:19
+// C/C++ source code generated on  : 23-Sep-2025 17:16:51
 //
 
 #ifndef CONTROLLER_COMP_H
@@ -17,7 +17,7 @@
 #include <cstdlib>
 
 // Function Declarations
-extern void controller_comp(const double x[8], double u_comp[6]);
+extern void controller_comp(const double x[4], double u_comp[6]);
 
 extern void controller_comp_initialize();
 

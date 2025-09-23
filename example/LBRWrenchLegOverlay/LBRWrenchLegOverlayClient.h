@@ -106,10 +106,14 @@ public:
     */
    virtual void command();
       
-private:
-
    static const int CART_VECTOR_DIM = 6; //!< number of elements in a Cartesian vector
    double _wrench[CART_VECTOR_DIM];      //!< commanded wrench
+
+   virtual void setWrench(const double wrench[6]) {
+       for (int i = 0; i < CART_VECTOR_DIM; i++) {
+           _wrench[i] = wrench[i];
+       }
+   }
    
 };
 

@@ -7,5 +7,5 @@ class Tracking_data_client
 public:
 	igtl::ClientSocket::Pointer socket;
 	void init();
-	void loop();
+	igtl::TrackingDataElement::Pointer loop();
 };

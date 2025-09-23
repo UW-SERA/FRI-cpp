@@ -4,14 +4,14 @@
     <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\controller_comp\controller_comp.cpp" />
     <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\LBRWrenchLegOverlayApp.cpp" />
     <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\LBRWrenchLegOverlayClient.cpp" />
-    <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\TrackingDataClientUDPTransfer.cxx" />
     <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\TrackingDataClient.cxx" />
+    <ClCompile Include="..\..\..\example\LBRWrenchLegOverlay\transform2angles\transform2angles.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\controller_comp\controller_comp.h" />
     <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\LBRWrenchLegOverlayClient.h" />
-    <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\TrackingDataClientUDPTransfer.h" />
     <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\TrackingDataClient.h" />
+    <ClInclude Include="..\..\..\example\LBRWrenchLegOverlay\transform2angles\transform2angles.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\example\LBRWrenchLegOverlay\openigtlink\CMakeLists.txt" />

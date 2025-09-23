@@ -23,7 +23,7 @@
 #include "TrackingDataClient.h"
 
 
-int ReceiveTrackingData(igtl::ClientSocket::Pointer& socket, igtl::MessageHeader::Pointer& header);
+igtl::TrackingDataElement::Pointer ReceiveTrackingData(igtl::ClientSocket::Pointer& socket, igtl::MessageHeader::Pointer& header);
 
 void Tracking_data_client::init()
 {
@@ -75,8 +75,12 @@ void Tracking_data_client::init()
     */
 }
 
-void Tracking_data_client::loop()
+igtl::TrackingDataElement::Pointer Tracking_data_client::loop()
 {
+    igtl::TrackingDataElement::Pointer output;
+    output = igtl::TrackingDataElement::New();
+    output->SetName("no_track");
+
     //------------------------------------------------------------
     // Wait for a reply
     igtl::MessageHeader::Pointer headerMsg;
@@ -104,28 +108,30 @@ void Tracking_data_client::loop()
     if (strcmp(headerMsg->GetDeviceType(), "TDATA") == 0 || strcmp(headerMsg->GetDeviceType(), "TRANSFORM") == 0)
     {   
         //header->SetHeaderVersion(1);
-        std::cerr << "Receiving TRANSFORM data type." << std::endl;
-        std::cerr << " version : " << headerMsg->GetHeaderVersion() << std::endl;
-        std::cerr << " msg header : " << headerMsg->GetPackSize() << "byte" << " , address : " << headerMsg->GetPackPointer() << std::endl;
+        // std::cerr << "Receiving TRANSFORM data type." << std::endl;
+        //std::cerr << " version : " << headerMsg->GetHeaderVersion() << std::endl;
+        //std::cerr << " msg header : " << headerMsg->GetPackSize() << "byte" << " , address : " << headerMsg->GetPackPointer() << std::endl;
         headerMsg->SetMessageType("TDATA");
-        ReceiveTrackingData(socket, headerMsg);
+        output = ReceiveTrackingData(socket, headerMsg);
     }
     else
     {
         std::cerr << "Receiving : " << headerMsg->GetDeviceType() << std::endl;
-        std::cerr << " msg header : " << headerMsg->GetPackSize() << "byte" << " , address : " << headerMsg->GetPackPointer() << std::endl;
+        //std::cerr << " msg header : " << headerMsg->GetPackSize() << "byte" << " , address : " << headerMsg->GetPackPointer() << std::endl;
         socket->Skip(headerMsg->GetBodySizeToRead(), 0);
     }
+    return output;
 }
 
 
-int ReceiveTrackingData(igtl::ClientSocket::Pointer& socket, igtl::MessageHeader::Pointer& header)
+igtl::TrackingDataElement::Pointer ReceiveTrackingData(igtl::ClientSocket::Pointer& socket, igtl::MessageHeader::Pointer& header)
 { 
+    igtl::TrackingDataElement::Pointer trackingElement;
+    trackingElement = igtl::TrackingDataElement::New();
+    trackingElement->SetName("no_track");
+
   //------------------------------------------------------------
   // Allocate TrackingData Message Class
-
-    
-
   igtl::TrackingDataMessage::Pointer trackingData;
   trackingData = igtl::TrackingDataMessage::New();
   trackingData->SetMessageHeader(header);
@@ -135,16 +141,17 @@ int ReceiveTrackingData(igtl::ClientSocket::Pointer& socket, igtl::MessageHeader
   bool timeout(false);
   int rs = socket->Receive(trackingData->GetPackBodyPointer(), trackingData->GetPackBodySize(), timeout);
 
-  std::cerr << " msg body : " << rs << "/" << trackingData->GetPackBodySize() << " byte" << " , address : " << trackingData->GetPackBodyPointer() << std::endl;
+  // std::cerr << " msg body : " << rs << "/" << trackingData->GetPackBodySize() << " byte" << " , address : " << trackingData->GetPackBodyPointer() << std::endl;
 
   // print out all data
-  auto p = reinterpret_cast<const uint8_t*>(trackingData->GetPackPointer());
+  /* auto p = reinterpret_cast<const uint8_t*>(trackingData->GetPackPointer());
   for (int i = 0; i < 222; ++i) {
       // Print each byte in hex with leading zeros, e.g., 0A, 1F
       std::cout << std::hex << std::setw(2) << std::setfill('0')
           << static_cast<int>(p[i]) << " ";
   }
   std::cout << std::dec << "\n";  // Reset to decimal
+  */
 
   // Deserialize the transform data
   //header->m_MetaData = header->MetaData + 10;
@@ -155,33 +162,32 @@ int ReceiveTrackingData(igtl::ClientSocket::Pointer& socket, igtl::MessageHeader
   if (c & igtl::MessageHeader::UNPACK_BODY) // if CRC check is OK
   {
     int nElements = trackingData->GetNumberOfTrackingDataElements();
-	std::cerr << " message: " << nElements << " elements." << std::endl;
+	//std::cerr << " message: " << nElements << " elements." << std::endl;
 
-    for (int i = 0; i < nElements; i ++)
-      {
-      igtl::TrackingDataElement::Pointer trackingElement;
+    //for (int i = 0; i < nElements; i ++)
+    for (int i = 0; i < 1; i++)
+    {
+      //igtl::TrackingDataElement::Pointer trackingElement;
       trackingData->GetTrackingDataElement(i, trackingElement);
 
       igtl::Matrix4x4 matrix;
       trackingElement->GetMatrix(matrix);
 
 
-      std::cerr << "========== Element #" << i << " ==========" << std::endl;
+      //std::cerr << "========== Element #" << i << " ==========" << std::endl;
       std::cerr << " Name       : " << trackingElement->GetName() << std::endl;
-      std::cerr << " Type       : " << (int) trackingElement->GetType() << std::endl;
-      std::cerr << " Matrix : " << std::endl;
-      igtl::PrintMatrix(matrix);
-      std::cerr << "================================" << std::endl;
-      std::cerr << " " << std::endl;
-      }
-    return 1;
+      //std::cerr << " Type       : " << (int) trackingElement->GetType() << std::endl;
+      //std::cerr << " Matrix : " << std::endl;
+      //igtl::PrintMatrix(matrix);
+      //std::cerr << "================================" << std::endl;
+    }
   }
   else     
   {
     std::cerr << " CRC error" << std::endl;
     std::cerr << " " << std::endl;
   }
-  return 0;
+  return trackingElement;
 }
 
 

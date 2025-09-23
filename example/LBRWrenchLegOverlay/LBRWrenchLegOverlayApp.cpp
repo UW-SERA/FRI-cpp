@@ -63,8 +63,10 @@ cost of any service and repair.
 #include "LBRWrenchLegOverlayClient.h"
 #include "friUdpConnection.h"
 #include "friClientApplication.h"
-#include "TrackingDataClientUDPTransfer.h"
 #include "TrackingDataClient.h"
+#include "transform2angles/transform2angles.h"
+#include "controller_comp/controller_comp.h"
+
 
 using namespace KUKA::FRI;
 
@@ -98,13 +100,18 @@ int main (const int argc, const char* const * const argv)
    /*                                                                         */
    /**************************************************************************/
    
-   // create new tracking data udp transfer object
-   //Tracking_data_client_udp_transfer trackerUDP;
+   // create new tracking data transfer object
    Tracking_data_client tracker;
+
+   static igtl::Matrix4x4 femur;
+   static igtl::Matrix4x4 tibia;
+   igtl::IdentityMatrix(femur);
+   igtl::IdentityMatrix(tibia);
+
 
    // create new wrench overlay client
    LBRWrenchLegOverlayClient trafoClient;
-
+   double wrench[LBRWrenchLegOverlayClient::CART_VECTOR_DIM] = {0};
 
    /***************************************************************************/
    /*                                                                         */
@@ -113,18 +120,17 @@ int main (const int argc, const char* const * const argv)
    /*                                                                         */
    /***************************************************************************/
 
-   // initialize tracker over udp
-   //trackerUDP.init();
+
    // initialize tracker over tcp
    tracker.init();
 
 
-   // create new udp connection
+   // create new udp connection to Robot
    UdpConnection connection;
 
 
    // pass connection and client to a new FRI client application
-   //ClientApplication app(connection, trafoClient);
+   ClientApplication app(connection, trafoClient);
    
    // connect client application to KUKA Sunrise controller
    bool success = 1;
@@ -133,7 +139,6 @@ int main (const int argc, const char* const * const argv)
    {
       printf("\nConnection to KUKA Sunrise controller failed.");
    }
-
 
 
    /***************************************************************************/
@@ -146,19 +151,57 @@ int main (const int argc, const char* const * const argv)
    // repeatedly call the step routine to receive and process FRI packets
    while (success)
    {
-	  // receive tracking data
-	  //trackerUDP.loop();
-	  tracker.loop();
+		// initialize tracking data
+		igtl::TrackingDataElement::Pointer element;
+		element = igtl::TrackingDataElement::New();
 
-	  // set the wrench values
-      //success = app.step();
+		// receive tracking data
+		for (int i = 0; i < 2; i++) {
+			element = tracker.loop();
+			if ("FemurTrackerToRef" == std::string(element->GetName())) {
+				//std::cerr << "Saved FemurTrackerToRef" << std::endl;
+				element->GetMatrix(femur);
+			}
+			if ("TibiaTrackerToRef" == std::string(element->GetName())) {
+				//std::cerr << "Saved TibiaTrackerToRef" << std::endl;
+				element->GetMatrix(tibia);
+			}
+		}
+		// Convert to double
+		double femur_d[4][4], tibia_d[4][4];
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 4; j++) {
+				femur_d[i][j] = static_cast<double>(femur[i][j]);
+				tibia_d[i][j] = static_cast<double>(tibia[i][j]);
+			}
+		}
+
+
+		// transform to general coordinates (tracker to angles)
+		// input vector to controller_comp:
+		// leg_angles (rad): hip adduction, hip external rotation, hip flexion, knee flexion
+		double angles[4] = { 0 };
+		transform2angles(femur_d, tibia_d, angles);
+		std::cout << "Angles: " << angles[0] << ", " << angles[1] << ", " << angles[2] << ", " << angles[3] << std::endl;
+
+
+		// calculate new forces in x and y direction
+		// Call the control law function controller_comp:
+		controller_comp(angles, wrench);
+		std::cout << "Force : " << wrench[0] << ", " << wrench[1] << ", " << wrench[2] << std::endl;
+		std::cout << "Torque: " << wrench[3] << ", " << wrench[4] << ", " << wrench[5] << std::endl;
+
+
+	  // send the wrench values
+	  trafoClient.setWrench(wrench);
+      success = app.step();
       
       // check if we are in IDLE because the FRI session was closed
-      //if (trafoClient.robotState().getSessionState() == IDLE)
+      if (trafoClient.robotState().getSessionState() == IDLE)
       {
          // In this demo application we simply quit.
          // Waiting for a new FRI session would be another possibility.
-      //   break;
+         break;
       }
    }
 
@@ -170,7 +213,7 @@ int main (const int argc, const char* const * const argv)
    /***************************************************************************/
 
    // disconnect from controller
-   //app.disconnect();
+   app.disconnect();
    
    printf("Exit LBRWrenchLegOverlay Client Application\n");
    

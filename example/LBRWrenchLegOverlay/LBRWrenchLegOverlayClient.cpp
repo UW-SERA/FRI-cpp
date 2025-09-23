@@ -57,8 +57,9 @@ cost of any service and repair.
 \file
 \version {2.7.0}
 */
-#include <cstring>
+#include <cstdlib>
 #include <cstdio>
+#include <cstring>
 // Visual studio needs extra define to use math constants
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -105,9 +106,9 @@ void LBRWrenchLegOverlayClient::waitForCommand()
    // the base method.
    LBRClient::waitForCommand();
    
-   // If we want to command wrenches, we have to command them all the time. Even in
+   // If we want to command_wrenches, we have to command them all the time. Even in
    // waitForCommand(). This has to be done due to consistency checks. In this state 
-   // it is only necessary, that some wrench values are sent.
+   // it is only necessary, that some_wrench values are sent.
    // The LBR does not take the specific value into account.
    if (robotState().getClientCommandMode() == WRENCH)
    {
@@ -125,15 +126,6 @@ void LBRWrenchLegOverlayClient::command()
    if (robotState().getClientCommandMode() == WRENCH)
    {
         // calculate new forces in x and y direction
-
-	    // input vector to controller_comp:
-        // leg_angles (rad): hip adduction, hip external rotation, hip flexion, knee flexion, angular rates [4]
-        // set input vector to zero for now, until NDI tracker connection works
-        double leg_angles[8] = {0};
-
-        // Call the coontrol law function controller_comp:
-        controller_comp(leg_angles, _wrench);
-     
         robotCommand().setWrench(_wrench);
    }
 }
